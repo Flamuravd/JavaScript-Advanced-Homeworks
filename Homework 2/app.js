@@ -37,7 +37,7 @@ const fetchPostsAsync = async () => {
     console.log(`First name, last name and city of the students that are over 30 and have an average grade of 4 and above:`, studentsInfo);
 
     // 4. Find the student named Arthur Cadore and display all of his information
-    const studentArthurCadore = data.filter(student => student.firstName.startsWith("Arthur") && student.lastName.startsWith("Cadore"));
+    const studentArthurCadore = data.filter(student => student.firstName === "Arthur" && student.lastName === "Cadore");
 
     document.querySelector("#studentArthurCadore").innerHTML = studentArthurCadore
     .map(student => `<p>4. ${student.firstName} ${student.lastName}, Age: ${student.age}, Grade: ${student.averageGrade}</p>`)
